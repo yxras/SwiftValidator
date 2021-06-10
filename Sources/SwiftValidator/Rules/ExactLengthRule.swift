@@ -36,6 +36,7 @@ public class ExactLengthRule : Rule {
      - returns: A boolean value. True if validation is successful; False if validation fails.
      */
     public func validate(_ value: String) -> Bool {
+        if value.isEmpty { return true }
         return value.count == length
     }
     

@@ -36,7 +36,7 @@ public class CardExpiryYearRule: Rule {
      - returns: Boolean value. True on successful validation, otherwise False on failed Validation.
      */
     public func validate(_ value: String) -> Bool {
-
+        if value.isEmpty { return true }
         ///Holds the current year
         let thisYear = NSCalendar.current.component(Calendar.Component.year, from: Date())
 
